@@ -1,7 +1,10 @@
 import React from "react";
+import Todos from "./Todos";
 
-const App = () => {
-  return <div>hello</div>;
-};
-
-export default App;
+export default function App() {
+  return (
+    <div>
+      <Todos />
+    </div>
+  );
+}
