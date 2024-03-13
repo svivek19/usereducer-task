@@ -6,8 +6,9 @@ function reducer(state, action) {
   switch (action.type) {
     case "ADD_TASK":
       return [...state, { id: state.length + 1, name: action.payload }];
-
       break;
+    case "DELETE":
+      return state.filter((task) => task.id !== action.payload);
 
     default:
       return state;
@@ -31,7 +32,14 @@ const Todos = () => {
 
       <ul>
         {todo.map((val) => (
-          <li key={val.id}>{val.name}</li>
+          <li key={val.id}>
+            {val.name}
+            <button
+              onClick={() => dispatch({ type: "DELETE", payload: val.id })}
+            >
+              del
+            </button>
+          </li>
         ))}
       </ul>
     </>

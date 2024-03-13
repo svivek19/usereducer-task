@@ -1,10 +1,12 @@
 import React from "react";
-import Todos from "./Todos";
+import StateApp from "./StateApp";
+// import Todos from "./Todos";
 
 export default function App() {
   return (
     <div>
-      <Todos />
+      {/* <Todos /> */}
+      <StateApp />
     </div>
   );
 }
